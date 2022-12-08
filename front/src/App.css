@@ -97,6 +97,6 @@ button >svg {
   min-height: 100vh;
 }
 .stack-trace {
-  background-color: rgba(204, 204, 204, 0.291);
+  background-color: #cccccc4a;
   padding: 15px;
 }
