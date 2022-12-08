@@ -31,7 +31,7 @@ export const Charts = ({ results }: Stats) => {
   ];
 
   return (
-    <>
+    <div className="chart-container">
       <h1>Cypress Usaflex diário</h1>
       <h3>Suites: {results.suites}</h3>
       <h3>Cenários testados: {results.tests}</h3>
@@ -45,6 +45,6 @@ export const Charts = ({ results }: Stats) => {
         <Bar dataKey="fail" fill="red" />
         <YAxis />
       </BarChart>
-    </>
+    </div>
   );
 };
