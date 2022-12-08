@@ -27,16 +27,16 @@ export const Charts = ({ results }: Stats) => {
 
 
   const data1 = [
-    { sname: 'Sucesso', fname: 'Falha', success: results.passes, fail: results.failures },
+    { success: results.passes, fail: results.failures },
   ];
 
   return (
     <>
       <h1>Cypress Usaflex diário</h1>
       <h3>Suites: {results.suites}</h3>
-      <h3>Cenaários testados: {results.tests}</h3>
-      <h3>Falhou {results.failures} igual a {(100 - results.passPercent).toFixed(1)} %</h3>
-      <h3>Passou {results.passes} igual a {results.passPercent.toFixed(1)} %</h3>
+      <h3>Cenários testados: {results.tests}</h3>
+      <h3>Erro: {results.failures} ou {(100 - results.passPercent).toFixed(1)} %</h3>
+      <h3>Sucesso: {results.passes} ou {results.passPercent.toFixed(1)} %</h3>
       <h3>Os resultados abaixo correspondem ao periodo de 00:01 até 23:59</h3>
 
       <BarChart width={600} height={600} data={data1}>
